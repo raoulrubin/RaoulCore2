@@ -1,0 +1,35 @@
+
+ [
+    {
+        "name": "C#",
+        "rating" : "5",
+        "src": "assets/icons/dotnet.png",
+        "content": 
+            [
+                "Very fluent - working with.NET and C# in 2003. "
+            ]
+        },
+        {
+            "name": "Angular 8",
+            "rating" : "3",
+            "src": "https://miro.medium.com/max/250/1*nbJ41jD1-r2Oe6FsLjKaOg.png",
+            "content": 
+                [
+                    "My first Angular 8 App.",
+                    "I've done quite a lot of maintenance on existing angular 2 applications, ",
+                    "but had not created one from scratch."
+                ]
+        },
+        {
+            "name": "Bootstrap",
+            "rating" : "2.2",
+            "src": "assets/icons/bootstrap.png",
+            "content": ["First encountered Bootstrap in 2013. Dabbled with it on various projects."]
+        },
+        {
+            "name": "Microsoft Azure",
+            "rating" : "0.5",
+            "src": "assets/icons/AzureLogo.png",
+            "content": ["This is my first Azure Application."]
+        }
+    ]

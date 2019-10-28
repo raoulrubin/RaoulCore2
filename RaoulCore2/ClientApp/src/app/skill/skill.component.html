@@ -1,0 +1,25 @@
+<ngb-accordion #accSkill skillAccordian="ngbAccordion" (click)="allClick()">
+    <ngb-panel>
+        <ng-template ngbPanelHeader>
+            <div class="iconDiv"><img style="height: 100%" src="{{this.imagePath}}"></div>
+            <div class="nameDiv">{{this.name}}</div>
+            <div class="ratingDiv">
+                <ng-template #stars let-fill="fill">
+                    <span class="star" [class.full]="fill === 100">
+                        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+                    </span>
+                </ng-template>
+                <ngb-rating [(rate)]="this.rating" [starTemplate]="stars" [readonly]="true" max="5"></ngb-rating>
+             </div>
+            <div class="infoDiv">
+                <i class="fa fa-2x fa-info"></i>
+            </div>
+        </ng-template>
+        <ng-template ngbPanelContent>
+            <div class="row" *ngFor="let line of this.lines">
+                    {{line}}
+            </div>
+        </ng-template>
+    </ngb-panel>
+
+</ngb-accordion>

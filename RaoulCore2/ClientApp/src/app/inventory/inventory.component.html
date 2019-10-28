@@ -1,0 +1,15 @@
+<div class="container" style="width: 100%;">
+    <div class="row">
+      <div class="col-12">
+  
+          <div class="blockquote text-center">"Learning Angular 8, Bootstap, Azure, and Git the hard way."</div>
+        
+      </div>
+    </div>
+    <div class="row" *ngFor="let data of sections">
+        <div class="col-12">
+                <app-skill [data]="data">
+              </app-skill>
+        </div>
+    </div>
+  </div>
