@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { SkillData } from '../skilldata'
+
 @Component({
   selector: 'app-skill',
   templateUrl: './skill.component.html',

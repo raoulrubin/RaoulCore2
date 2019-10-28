@@ -28,8 +28,26 @@
         },
         {
             "name": "Microsoft Azure",
-            "rating" : "0.5",
+            "rating" : "1.5",
             "src": "assets/icons/AzureLogo.png",
             "content": ["This is my first Azure Application."]
+        },
+        {
+            "name": "Node.js",
+            "rating" : "1.5",
+            "src": "assets/icons/nodejs.png",
+            "content": ["Used Node while building Angular Apps."]
+        },
+        {
+            "name": "Dotnet CORE",
+            "rating" : "4",
+            "src": "assets/icons/dotnetcore.png",
+            "content": ["This is the dotnet framework I'm using now."]
+        },
+        {
+            "name": "C++",
+            "rating" : "3",
+            "src": "assets/icons/cplusplus.png",
+            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it."]
         }
     ]
