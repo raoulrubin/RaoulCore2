@@ -10,7 +10,9 @@ export class RaoulNavComponent implements OnInit {
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
   }
-
+  collapse(): void {
+    this.collapsed = true;
+  }
 
 
   ngOnInit() {
