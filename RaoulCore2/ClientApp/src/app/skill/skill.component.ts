@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SkillData } from '../skilldata'
+import {NgbPopoverConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-skill',
@@ -8,7 +9,6 @@ import { SkillData } from '../skilldata'
 })
 export class SkillComponent implements OnInit {
   @Input() data: SkillData;
-  @ViewChild("accSkill", { static: false }) myAccordian;
   isExpanded: boolean;
 
   value = 3;
@@ -23,7 +23,9 @@ export class SkillComponent implements OnInit {
   rating: number;
   lines: string[];
 
-  constructor() { }
+  constructor(config: NgbPopoverConfig) {
+    config.placement = 'bottom';
+   }
 
   ngOnInit() {
     this.name = this.data.name;
@@ -38,18 +40,5 @@ export class SkillComponent implements OnInit {
     var outContent = work.split(brTag);
     return outContent;
   }
-
-  allClick() {
-    if (this.isExpanded) {
-      this.myAccordian.collapseAll();
-    } else {
-      this.myAccordian.expandAll();
-    }
-    this.isExpanded = !this.isExpanded;
-  }
-}
-
-
-export class SkillRow {
 
 }

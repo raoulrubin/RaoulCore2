@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { InventoryComponent } from './inventory/inventory.component';
 import { SkillComponent } from './skill/skill.component';
+import { RaoulNavComponent } from './raoul-nav/raoul-nav.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SkillComponent } from './skill/skill.component';
     CounterComponent,
     FetchDataComponent,
     InventoryComponent,
-    SkillComponent
+    SkillComponent,
+    RaoulNavComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
