@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SkillData } from '../skilldata'
-import {NgbPopoverConfig} from '@ng-bootstrap/ng-bootstrap';
+import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
+import { RatingData } from './RatingData';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-skill',
@@ -15,30 +17,40 @@ export class SkillComponent implements OnInit {
   readonly = true;
   size = 'x-small';
   color = '#FFB75D';
-  private sizes = ['x-small', 'small', '', 'large'];
-  private colors = ['#FFB75D', '#F5675B', '#9FDB66'];
 
   name: string;
   imagePath: string;
   rating: number;
   lines: string[];
+  starInfo: string;
 
-  constructor(config: NgbPopoverConfig) {
-    config.placement = 'bottom';
-   }
+  constructor(config: NgbPopoverConfig, private renderer: Renderer2) {
+    config.placement = 'bottom-right';
+  }
 
   ngOnInit() {
     this.name = this.data.name;
     this.imagePath = this.data.src;
-    this.rating = this.data.rating;
+    const r = new RatingData(this.data.rating);
+    this.rating = r.stars;
+    this.starInfo = r.comment;
     this.lines = this.combineLines(this.data.content);
   }
+
 
   combineLines(content: string[]): string[] {
     const brTag = "<p>";
     var work = content.join("");
     var outContent = work.split(brTag);
     return outContent;
+  }
+
+  over( event : UIEvent ) : void{
+    this.renderer.addClass(event.target, "infoFocus");
+  }
+
+  out( event : UIEvent ) : void{
+    this.renderer.removeClass(event.target, "infoFocus");
   }
 
 }

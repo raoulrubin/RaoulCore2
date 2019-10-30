@@ -1,6 +1,6 @@
 export class SkillData {
     name: string;
-    rating: number;
+    rating: string;
     src: string;
     content: string[];
 }

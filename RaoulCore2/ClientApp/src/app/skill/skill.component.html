@@ -9,12 +9,10 @@
                 <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
             </span>
         </ng-template>
-        <ngb-rating [(rate)]="this.rating" [starTemplate]="stars" [readonly]="true" max="5">
+        <ngb-rating [(rate)]="this.rating" [starTemplate]="stars" [readonly]="true" max="5" ngbTooltip="{{starInfo}}">
         </ngb-rating>
     </div>
     <div class="infoDiv">
-        <!-- <i class="fa fa-2x fa-info"></i> -->
-        X
+        <i class="fa fa-info-circle"  (mouseenter)="over($event)" (mouseout)="out($event)"></i>
     </div>
-
 </div>

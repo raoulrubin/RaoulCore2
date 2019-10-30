@@ -21,12 +21,15 @@
     float: right;
     padding-top: 6px;
 }
+.infoFocus{
+  color: blue !important;
+}
 .contentDiv{
     clear: both;
 }
-.fa-info {
-    color: lightblue;
-  }
+.fa-info-circle{
+  color: lightblue;
+}
 
   .star {
     position: relative;

@@ -15,9 +15,8 @@
             "src": "https://miro.medium.com/max/250/1*nbJ41jD1-r2Oe6FsLjKaOg.png",
             "content": 
                 [
-                    "My first Angular 8 App.",
-                    "I've done quite a lot of maintenance on existing angular 2 applications, ",
-                    "but had not created one from scratch."
+                    "My first Angular 8 App. ",
+                    "I've done quite a lot of maintenance on an existing angular 2 applications."
                 ]
         },
         {
@@ -42,12 +41,13 @@
             "name": "Dotnet CORE",
             "rating" : "4",
             "src": "assets/icons/dotnetcore.png",
-            "content": ["This is the dotnet framework I'm using now."]
+            "content": ["Loving .NET core! This is my go-to development technology."]
         },
         {
             "name": "C++",
-            "rating" : "3",
+            "rating" : "3| Expert, back in the day...",
             "src": "assets/icons/cplusplus.png",
-            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it."]
+            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it. ",
+                        "Huge improvements in C++11 and onward."]
         }
     ]
