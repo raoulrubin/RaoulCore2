@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SkillData } from '../skilldata'
+import { SkillData } from '../skill-data'
 import { NgbPopoverConfig } from '@ng-bootstrap/ng-bootstrap';
-import { RatingData } from './RatingData';
+import { RatingData } from './rating-data';
 import { Renderer2 } from '@angular/core';
 
 @Component({

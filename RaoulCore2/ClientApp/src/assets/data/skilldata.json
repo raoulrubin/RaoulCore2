@@ -1,6 +1,7 @@
 
  [
     {
+        "relevance" : "0",
         "name": "C#",
         "rating" : "5",
         "src": "assets/icons/dotnet.png",
@@ -10,6 +11,7 @@
             ]
         },
         {
+            "relevance" : "0",
             "name": "Angular 8",
             "rating" : "3",
             "src": "https://miro.medium.com/max/250/1*nbJ41jD1-r2Oe6FsLjKaOg.png",
@@ -20,34 +22,46 @@
                 ]
         },
         {
+            "relevance" : "2",
             "name": "Bootstrap",
             "rating" : "2.2",
             "src": "assets/icons/bootstrap.png",
             "content": ["First encountered Bootstrap in 2013. Dabbled with it on various projects."]
         },
         {
+            "relevance" : "0",
             "name": "Microsoft Azure",
             "rating" : "1.5",
             "src": "assets/icons/AzureLogo.png",
             "content": ["This is my first Azure Application."]
         },
         {
+            "relevance" : "1",
             "name": "Node.js",
             "rating" : "1.5",
             "src": "assets/icons/nodejs.png",
             "content": ["Used Node while building Angular Apps."]
         },
         {
+            "relevance" : "0",
             "name": "Dotnet CORE",
             "rating" : "4",
             "src": "assets/icons/dotnetcore.png",
             "content": ["Loving .NET core! This is my go-to development technology."]
         },
         {
+            "relevance" : "0",
             "name": "C++",
             "rating" : "3| Expert, back in the day...",
             "src": "assets/icons/cplusplus.png",
             "content": ["Worked with C++ for 15 years, however it's been a while since I've used it. ",
                         "Huge improvements in C++11 and onward."]
+        },
+        {
+            "relevance" : "2",
+            "name": "COM/DCOM",
+            "rating" : "3| Expert, back in the day...",
+            "src": "assets/icons/comdcom.png",
+            "content": ["Published a book on COM/DCOM in 1998. Haven't touched it since 2007."]
         }
     ]

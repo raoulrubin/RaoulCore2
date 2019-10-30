@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SkillService } from '../skill.service';
-import { SkillData } from '../skilldata';
+import { SkillData } from '../skill-data';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -28,5 +28,4 @@ export class InventoryComponent implements OnInit {
     // Only need to unsubscribe if its a multi event Observable
     this.subscription.unsubscribe();
   }
-
 }
