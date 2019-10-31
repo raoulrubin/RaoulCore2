@@ -54,7 +54,7 @@
             "name": "C++",
             "rating" : "3| Expert, back in the day...",
             "src": "assets/icons/cplusplus.png",
-            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it. ",
+            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it.",
                         "Huge improvements in C++11 and onward."]
         },
         {

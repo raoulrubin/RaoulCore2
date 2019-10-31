@@ -1,0 +1,42 @@
+
+.table th{
+    padding: 1px;
+}
+table td{
+    padding: 1px;
+}
+.colSort{
+    visibility: hidden;
+    font-size: 1px;
+    width: 1px;
+    padding: 0;
+}
+.iconDiv{
+    width: 60px;
+    height: 20px;
+}
+.colName{
+    min-width: 140px;
+    font-size: small;
+}
+.starDiv{
+    min-width: 90px;
+}
+.fa-info-circle{
+    color: #5c85d6;
+}
+.infoFocus{
+    color: blue !important;
+}
+
+@media screen and (max-width: 600px) {
+    .big-screen{
+        display:none;
+    }
+}
+@media screen and (min-width: 599px) {
+    .small-screen{
+        display:none;
+    }
+}
+

@@ -6,24 +6,24 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { InventoryComponent } from './inventory/inventory.component';
-import { SkillComponent } from './skill/skill.component';
 import { RaoulNavComponent } from './raoul-nav/raoul-nav.component';
+import { SkillListComponent } from './skill-list/skill-list.component';
+import { SkilRating } from "./stars/stars.component";
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
      HomeComponent,
-    CounterComponent,
     FetchDataComponent,
-    InventoryComponent,
-    SkillComponent,
-    RaoulNavComponent
+    RaoulNavComponent,
+    SkillListComponent,
+    SkilRating,
+    AboutComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -32,8 +32,8 @@ import { RaoulNavComponent } from './raoul-nav/raoul-nav.component';
     NgbModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'fetch-data', component: FetchDataComponent },      
+      { path: 'about', component: AboutComponent },
     ])
   ],
   providers: [],

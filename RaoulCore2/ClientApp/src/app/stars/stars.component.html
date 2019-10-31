@@ -1,0 +1,10 @@
+<div style="width: 100px;">
+<ng-template #stars let-fill="fill">
+    <span class="star" [class.full]="fill === 100">
+        <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+    </span>
+</ng-template>
+<ngb-rating [(rate)]="this.starCount" [starTemplate]="stars" class="starClass"
+            [readonly]="true" max="5" ngbTooltip="{{this.starInfo}}">
+</ngb-rating>
+</div>
