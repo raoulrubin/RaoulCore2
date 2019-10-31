@@ -1,4 +1,4 @@
-// Cloned from w3schools.com
+// Didn't write this - cloned from w3schools.com and converted to TypeScript
 
 export class DomTableSorter {
   table : any;

@@ -1,74 +1,157 @@
-
- [
+[
     {
-        "relevance" : "0",
+        "relevance": "0",
         "name": "C#",
-        "rating" : "5",
+        "rating": "5",
         "src": "assets/icons/dotnet.png",
-        "content": 
-            [
-                "Very fluent - working with.NET and C# in 2003. "
-            ]
-        },
-        {
-            "relevance" : "0",
-            "name": "Angular 8",
-            "rating" : "3",
-            "src": "https://miro.medium.com/max/250/1*nbJ41jD1-r2Oe6FsLjKaOg.png",
-            "content": 
-                [
-                    "My first Angular 8 App. ",
-                    "I've done quite a lot of maintenance on an existing angular 2 applications."
-                ]
-        },
-        {
-            "relevance" : "2",
-            "name": "Bootstrap",
-            "rating" : "2.2",
-            "src": "assets/icons/bootstrap.png",
-            "content": ["First encountered Bootstrap in 2013. Dabbled with it on various projects."]
-        },
-        {
-            "relevance" : "0",
-            "name": "Microsoft Azure",
-            "rating" : "1.5",
-            "src": "assets/icons/AzureLogo.png",
-            "content": ["This is my first Azure Application."]
-        },
-        {
-            "relevance" : "1",
-            "name": "Node.js",
-            "rating" : "1.5",
-            "src": "assets/icons/nodejs.png",
-            "content": ["Used Node while building Angular Apps."]
-        },
-        {
-            "relevance" : "0",
-            "name": "Dotnet CORE",
-            "rating" : "4",
-            "src": "assets/icons/dotnetcore.png",
-            "content": ["Loving .NET core! This is my go-to development technology."]
-        },
-        {
-            "relevance" : "0",
-            "name": "C++",
-            "rating" : "3| Expert, back in the day...",
-            "src": "assets/icons/cplusplus.png",
-            "content": ["Worked with C++ for 15 years, however it's been a while since I've used it.",
-                        "Huge improvements in C++11 and onward."]
-        },
-        {
-            "relevance" : "2",
-            "name": "COM/DCOM",
-            "rating" : "3| Expert, back in the day...",
-            "src": "assets/icons/comdcom.png",
-            "content": ["Published a book on COM/DCOM in 1998. Haven't touched it since 2007."]
-        },
-        {
-            "relevance" : "1",
-            "name": "InfoSec",
-            "rating" : "2.5",
-            "src": "assets/icons/infosec.png",
-            "content": ["Securing applications, oAuth, SAML, OWASP, NIST"]
-        }
-    ]
+        "content": [
+            "Very fluent - working with.NET and C# in 2003. "
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "Angular 8",
+        "rating": "3",
+        "src": "assets/icons/ng.png",
+        "content": [
+            "My first Angular 8 App. ",
+            "I've done quite a lot of maintenance on an existing angular 2 applications."
+        ]
+    },
+    {
+        "relevance": "2",
+        "name": "Bootstrap",
+        "rating": "2.2",
+        "src": "assets/icons/bootstrap.png",
+        "content": [
+            "First encountered Bootstrap in 2013. Dabbled with it on various projects."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "Microsoft Azure",
+        "rating": "1.5",
+        "src": "assets/icons/AzureLogo.png",
+        "content": [
+            "This is my first Azure Application."
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "Node.js",
+        "rating": "1.5",
+        "src": "assets/icons/nodejs.png",
+        "content": [
+            "Used Node while building Angular Apps."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "Dotnet CORE",
+        "rating": "4",
+        "src": "assets/icons/dotnetcore.png",
+        "content": [
+            "Loving .NET core! This is my go-to development technology."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "C++",
+        "rating": "3| Expert, back in the day...",
+        "src": "assets/icons/cplusplus.png",
+        "content": [
+            "Worked with C++ for 15 years, however it's been a while since I've used it.",
+            "Huge improvements in C++11 and onward."
+        ]
+    },
+    {
+        "relevance": "2",
+        "name": "COM/DCOM",
+        "rating": "3| Expert, back in the day...",
+        "src": "assets/icons/comdcom.png",
+        "content": [
+            "Published a book on COM/DCOM in 1998. Haven't touched it since 2007."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "InfoSec",
+        "rating": "2.5",
+        "src": "assets/icons/infosec.png",
+        "content": [
+            "Application hardening - oAuth, SAML, OWASP, NIST, passwords."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "SQL",
+        "rating": "4",
+        "src": "assets/icons/sql.png",
+        "content": [
+            "Extensive SQL application development. Mostly SQLServer."
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "Entity Framework",
+        "rating": "3",
+        "src": "assets/icons/ef.png",
+        "content": [
+            "Entity Framework 6 (code first)."
+        ]
+    },
+    {
+        "relevance": "0",
+        "name": "ASP MVC",
+        "rating": "2.5",
+        "src": "assets/icons/aspmvc.jfif",
+        "content": [
+            "Microsoft ASP MVC (Model View Controler)."
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "ASP.NET",
+        "rating": "4",
+        "src": "assets/icons/aspnet.png",
+        "content": [
+            "Extensive expreience building and maintaining ASP.NET (WebForms)."
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "TypeScript",
+        "rating": "3.5",
+        "src": "assets/icons/typescript.png",
+        "content": [
+            "JavaScript development with TypeScript."
+        ]
+    },
+    {
+        "relevance": "2",
+        "name": "Java",
+        "rating": "1.5",
+        "src": "assets/icons/java.png",
+        "content": [
+            "Java is ubiquitous. We've crossed paths more than once."
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "Selenium",
+        "rating": "2",
+        "src": "assets/icons/selenium.jfif",
+        "content": [
+            "Building Basic QA Automation. Selenium and WebDriver"
+        ]
+    },
+    {
+        "relevance": "1",
+        "name": "Jenkins",
+        "rating": "2",
+        "src": "assets/icons/jenkins.jfif",
+        "content": [
+            "Automated builds and automation testing using Jenkins."
+        ]
+    }
+]

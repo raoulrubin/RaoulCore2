@@ -16,4 +16,5 @@ export class SkillService {
   public getJSON() {
     return this.http.get<SkillData[]>("assets/data/skilldata.json");
   }
+  
 }

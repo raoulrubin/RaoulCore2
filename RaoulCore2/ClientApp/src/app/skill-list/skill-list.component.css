@@ -13,14 +13,14 @@ table td{
     padding: 0;
 }
 .iconDiv{
-    width: 70px;
+    width: 50px;
     height: 20px;
 }
 .colName{
     min-width: 140px;
 }
 .starDiv{
-    min-width: 90px;
+    min-width: 70px;
 }
 .fa-info-circle{
     color: #5c85d6;

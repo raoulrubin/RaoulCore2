@@ -1,9 +1,7 @@
-import { Component, OnInit, Inject, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { SkillData } from '../skill-data';
 import { SkillService } from '../skill.service';
 import { DomTableSorter } from '../dom-table-sorter';
-
-
 
 @Component({
   selector: 'skill-list',
@@ -15,22 +13,26 @@ export class SkillListComponent implements OnInit {
   svc: SkillService;
   renderer : Renderer2;
 
-  @ViewChild("content", {static : false}) content : ElementRef;
-
   ngOnInit() {
-      this.svc.getJSON().subscribe(result => {
-      this.skills = result;
+    this.loadSortedData();
+  }
+
+  loadSortedData() : void {
+    this.svc.getJSON().subscribe(data => {
+      let list = new Array<SkillData>();
+      data.forEach(value => list.push(value));
+      this.skills = list.sort(SkillData.comparer);
     }, error => console.error(error));
-    //window.onresize = (e : Event) => this.resizeContent(e);
   }
   
   combine( ar : string [] ) : string{
     return ar.join(" ");  
   }
-  constructor(svc: SkillService, @Inject('BASE_URL') baseUrl: string, renderer : Renderer2) {
+  constructor(svc: SkillService,renderer : Renderer2) {
     this.svc = svc;
     this.renderer = renderer;
   }
+  
   sortTable(col: number) {
     let sorter = new DomTableSorter("skilltable");
     sorter.sort(col);
