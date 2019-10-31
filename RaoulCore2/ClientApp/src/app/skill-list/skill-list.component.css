@@ -1,6 +1,7 @@
 
 .table th{
     padding: 1px;
+    font-weight: normal;
 }
 table td{
     padding: 1px;
@@ -12,12 +13,11 @@ table td{
     padding: 0;
 }
 .iconDiv{
-    width: 60px;
+    width: 70px;
     height: 20px;
 }
 .colName{
     min-width: 140px;
-    font-size: small;
 }
 .starDiv{
     min-width: 90px;

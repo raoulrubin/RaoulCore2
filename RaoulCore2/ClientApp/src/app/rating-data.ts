@@ -1,7 +1,7 @@
 export class RatingData {
     constructor(rating: string) {
         const parts = rating.split("|");
-        this.stars = parseInt(parts[0]);
+        this.stars = parseFloat(parts[0]);
         if (parts.length > 1) {
             this.comment = parts[1];
         }

@@ -63,5 +63,12 @@
             "rating" : "3| Expert, back in the day...",
             "src": "assets/icons/comdcom.png",
             "content": ["Published a book on COM/DCOM in 1998. Haven't touched it since 2007."]
+        },
+        {
+            "relevance" : "1",
+            "name": "InfoSec",
+            "rating" : "2.5",
+            "src": "assets/icons/infosec.png",
+            "content": ["Securing applications, oAuth, SAML, OWASP, NIST"]
         }
     ]
