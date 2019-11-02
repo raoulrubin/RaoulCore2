@@ -1,5 +1,6 @@
 <p *ngIf="!skills"><em>Loading...</em></p>
 
+<!-- Responsive styles will show/hide columns depending on screen width -->
 <table id="skilltable" class='table' *ngIf="true">
   <thead>
     <tr>
@@ -12,6 +13,7 @@
     </tr>
   </thead>
   <tbody>
+    <!-- iterate list of skills as rows in the table -->
     <tr *ngFor="let s of skills">
       <td class="colSort"><span>{{ s.relevance }}</span></td>
       <td class="colIcon">

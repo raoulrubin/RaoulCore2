@@ -1,0 +1,17 @@
+
+<button type="button" class="btn btn-link" (click)="this.requestWeather()">Get Weather</button>
+
+<div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+    <button class="btn btn-outline-primary mr-2" id="dropdownManual" ngbDropdownAnchor (focus)="myDrop.open()">Select Location</button>
+    <div ngbDropdownMenu aria-labelledby="dropdownManual">
+      <button ngbDropdownItem *ngFor="let loc of dropDownItems" (click)="select($event)">
+          {{loc}}</button>
+    </div>
+    </div>
+
+<div >
+    <h5>Current Conditions in {{this.weather.where}}</h5>
+    <div style="margin-left: 60px;" >
+        <current-conditions [data]="this.weather"></current-conditions>
+    </div>
+ </div>

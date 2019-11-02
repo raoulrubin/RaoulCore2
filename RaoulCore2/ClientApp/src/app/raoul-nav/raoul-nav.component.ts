@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+// Customized navbar component
 @Component({
   selector: 'raoul-nav',
   templateUrl: './raoul-nav.component.html',
@@ -10,15 +11,12 @@ export class RaoulNavComponent implements OnInit {
   toggleCollapsed(): void {
     this.collapsed = !this.collapsed;
   }
+  ngOnInit() {
+  }
   collapse(): void {
     this.collapsed = true;
   }
-
   clickAbout() : void {
     debugger;
   }
-
-  ngOnInit() {
-  }
-
 }

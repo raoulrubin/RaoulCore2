@@ -48,7 +48,7 @@
     {
         "relevance": "0",
         "name": "Dotnet CORE",
-        "rating": "4",
+        "rating": "4.5",
         "src": "assets/icons/dotnetcore.png",
         "content": [
             "Loving .NET core! This is my go-to development technology."
@@ -57,11 +57,10 @@
     {
         "relevance": "0",
         "name": "C++",
-        "rating": "3| Expert, back in the day...",
+        "rating": "3.5| Expert, back in the day...",
         "src": "assets/icons/cplusplus.png",
         "content": [
-            "Worked with C++ for 15 years, however it's been a while since I've used it.",
-            "Huge improvements in C++11 and onward."
+            "Worked with C++ for 15 years, however I haven't used it since 2012."
         ]
     },
     {
@@ -84,17 +83,18 @@
     },
     {
         "relevance": "0",
-        "name": "SQL",
-        "rating": "4",
+        "name": "SQL Development",
+        "rating": "4.25",
         "src": "assets/icons/sql.png",
         "content": [
-            "Extensive SQL application development. Mostly SQLServer."
+            "Extensive SQL application development. Mostly SQLServer.",
+            "Writing stored procedures, tuning, design. (Not a DBA)"
         ]
     },
     {
         "relevance": "1",
         "name": "Entity Framework",
-        "rating": "3",
+        "rating": "3.25",
         "src": "assets/icons/ef.png",
         "content": [
             "Entity Framework 6 (code first)."
@@ -103,7 +103,7 @@
     {
         "relevance": "0",
         "name": "ASP MVC",
-        "rating": "2.5",
+        "rating": "3",
         "src": "assets/icons/aspmvc.jfif",
         "content": [
             "Microsoft ASP MVC (Model View Controler)."
@@ -112,7 +112,7 @@
     {
         "relevance": "1",
         "name": "ASP.NET",
-        "rating": "4",
+        "rating": "4.25",
         "src": "assets/icons/aspnet.png",
         "content": [
             "Extensive expreience building and maintaining ASP.NET (WebForms)."

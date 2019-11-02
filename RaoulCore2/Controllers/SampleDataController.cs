@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using RaoulCore2.Services;
 
 namespace RaoulCore2.Controllers
 {
@@ -24,6 +25,28 @@ namespace RaoulCore2.Controllers
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
             });
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> WeatherByCity( string city )
+        {
+            var svc = new WeatherService();
+            var t1 = Task.Run(() => svc.GetWeather(city));
+
+
+            await Task.WhenAll(t1);
+
+            return Ok(t1.Result);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<string> WeatherByCoord(string latitude, string longitude)
+        {
+            var svc = new WeatherService();
+
+            var res = svc.GetWeather(latitude,longitude);
+
+            return await res;
         }
 
         public class WeatherForecast
