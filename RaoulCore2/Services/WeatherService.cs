@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -16,6 +16,15 @@ namespace RaoulCore2.Services
             return $"{server}/data/2.5/weather?appid={key}&q={city}";
         }
 
+        public async Task<string> GetWeatherData(string city)
+        {
+            return await ServiceRequest(GetUrl(city));
+        }
+        public async Task<string> GetWeatherData(string latitude, string longitude)
+        {
+            return await ServiceRequest(GetUrl(latitude,longitude));
+        }
+
         private string GetUrl(string latitude, string longitude)
         {
             return $"{server}/data/2.5/weather?appid={key}&lat={latitude}&lon={longitude}";
@@ -28,6 +37,26 @@ namespace RaoulCore2.Services
         public async Task<string> GetWeather(string city)
         {
             return await RequestWeather(GetUrl(city));
+        }
+
+        private async Task<string> ServiceRequest(string url)
+        {
+            WeatherData result;
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                result =  WeatherData.Parse(responseBody);
+            }
+            catch (HttpRequestException e)
+            {
+                Logger.LogError("request", e);
+                result = new WeatherData(e.Message);
+            }
+            var json = result.ToJson();
+            return json;
         }
 
         private async Task<string> RequestWeather(string url)
@@ -48,10 +77,5 @@ namespace RaoulCore2.Services
             }
             return null;
         }
-    }
-
-    public class WeatherData
-    {
-
     }
 }

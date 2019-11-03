@@ -1,14 +1,14 @@
+import { WeatherData } from './weather-data';
+
 export class Colorizer {
     color: string = "gray";
-    degrees : string  = "--";
-    constructor(degrees: number) {
-        this.degrees = degrees.toString()
-        if (degrees == null) {
+    constructor(data: WeatherData) {
+        if (data == null) {
             this.color = "gray";
             return;
         }
         const range: string[] = ["purple", "blue", "lightblue", "lightgreen", "green", "yellow", "orange", "red"];
-        const pct = this.percentile(range.length, degrees);
+        const pct = this.percentile(range.length, data.tempCurrent);
         this.color = range[pct];
     }
 

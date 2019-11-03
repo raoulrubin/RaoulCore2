@@ -1,0 +1,45 @@
+{
+  "coord": {
+    "lon": -78.91,
+    "lat": 36.02
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 281.52,
+    "pressure": 1023,
+    "humidity": 76,
+    "temp_min": 278.15,
+    "temp_max": 284.26
+  },
+  "visibility": 16093,
+  "wind": {
+    "speed": 0.8,
+    "deg": 27
+  },
+  "rain": {
+
+  },
+  "clouds": {
+    "all": 20
+  },
+  "dt": 1572704248,
+  "sys": {
+    "type": 1,
+    "id": 5645,
+    "country": "US",
+    "sunrise": 1572694734,
+    "sunset": 1572733165
+  },
+  "timezone": -14400,
+  "id": 4464368,
+  "name": "Durham",
+  "cod": 200
+}

@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    .outerdiv{
+        padding: 30px;
+        text-align: center;
+    }
+    .innerdiv{
+        margin: 0 auto; 
+        width: 100px;
+    }
+}
+@media screen and (min-width: 599px) {
+    .outerdiv{
+        margin-left: 40px;
+    }
+    .innerdiv{
+        margin: 0 auto; 
+    }}
