@@ -9,7 +9,7 @@ namespace RaoulCore2.Services
     {
         public WeatherData( string error)
         {
-            error = error;
+            this.error = error;
         }
         private WeatherData(JToken data)
         {

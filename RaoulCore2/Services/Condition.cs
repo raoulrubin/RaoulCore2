@@ -4,8 +4,8 @@
     {
         public Condition( string condition, string detail)
         {
-            description = condition;
-            detail = detail;
+            this.description = condition;
+            this.detail = detail;
         }
         public string description { get; }
         public string detail { get; }

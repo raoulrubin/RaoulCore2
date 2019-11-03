@@ -8,7 +8,7 @@ import { Colorizer } from '../colorizer';
   styleUrls: ["./conditions.component.css"]
 })
 export class ConditionsComponent implements OnChanges {
-  private fill = "rgb(255, 0, 0)";
+  fill = "rgb(255, 0, 0)";
   @Input() data: WeatherData;
   conditions: string;
 
