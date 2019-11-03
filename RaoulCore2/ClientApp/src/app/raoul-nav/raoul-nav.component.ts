@@ -17,6 +17,5 @@ export class RaoulNavComponent implements OnInit {
     this.collapsed = true;
   }
   clickAbout() : void {
-    debugger;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RatingData } from '../rating-data';
+import { RatingData } from '../models/rating-data';
 
 // Display star rating (ng-bootstrap)
 @Component({

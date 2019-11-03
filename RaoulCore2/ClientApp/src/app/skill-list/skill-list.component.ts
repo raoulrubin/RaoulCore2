@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { SkillData } from '../skill-data';
-import { SkillService } from '../skill.service';
-import { DomTableSorter } from '../dom-table-sorter';
+import { SkillData } from '../models/skill-data';
+import { SkillService } from '../services/skill.service';
+import { DomTableSorter } from '../utilities/dom-table-sorter';
 
 // Show a table of technical skills delivered from an HTTP request.
 @Component({

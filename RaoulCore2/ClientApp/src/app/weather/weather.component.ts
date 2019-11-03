@@ -1,66 +1,42 @@
-import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { LocationService } from '../location-service'
-import { WeatherData, Condition } from '../weather-data';
-import { stringify } from '@angular/compiler/src/util';
+import { LocationService } from '../services/location-service'
+import { WeatherData, Condition } from '../models/weather-data';
+import { Observable } from 'rxjs';
+import { WeatherService } from '../services/weather-service';
 
 @Component({
   selector: 'weather',
   templateUrl: './weather.component.html',
   styleUrls: ['./weather.component.css']
 })
-export class WeatherComponent implements OnInit {
-  @ViewChild("locations", {static : true}) locations : HTMLElement;
-  ngOnInit(): void {
-  }
+export class WeatherComponent {
+  @ViewChild("locations", { static: true }) locations: HTMLElement;
 
-  where: string;
-  dropDownItems : string[] = ["Durham,US", "San Francisco,US", "Manhattan,US","Chicago,US",
-                              "Miami,US", "Fairbanks,US", "Honolulu,US" ];
-  position : Position;
-  http : HttpClient;
-  results: string;
-  baseUrl : string;
-  weather : WeatherData;
+  dropDownItems: string[] = ["Durham,US", "San Francisco,US", "Manhattan,US", "Chicago,US",
+    "Miami,US", "Fairbanks,US", "Honolulu,US"];
+
+  http: HttpClient;
+  weather: WeatherData;
   latitude: number;
   longitude: number;
-  condition: string;
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string, loc : LocationService) {
-    this.http = http;
-    this.baseUrl = baseUrl;
+
+  constructor(private weatherSvc: WeatherService, private loc: LocationService) {
+
     this.weather = new WeatherData();
 
-    loc.getLocation( (p : Position) => {
-      this.position = p;
+    loc.getLocation((p: Position) => {
       this.dropDownItems.unshift("Current Location");
       this.latitude = p.coords.latitude;
       this.longitude = p.coords.longitude;
     });
   };
 
-  latLon() : string{
-    return "latitude=" + this.latitude.toFixed(2) + "&longitude=" + this.longitude.toFixed(2);
-  }
-
-  select( e : any ) : void {
+  select(e: any): void {
     const text = e.srcElement.innerText;
-    if (text == "Current Location"){
-      this.getWeatherByCoord();
-      return;
-    }
-    this.getWeather( "city=" + text );
-  }
 
-  getWeatherByCoord() : void {
-    const what = this.latLon();
-    this.http.get<WeatherData>(this.baseUrl + "api/SampleData/GetWeatherDataByCoordinate?" + what).subscribe(result => {
-      this.setWeather(result);
-      console.log('result : ' + result);
-    }, error => console.error(error));
-  }
-
-  getWeather( what : string) : void {
-    this.http.get<WeatherData>(this.baseUrl + "api/SampleData/GetWeatherDataByCity?" + what).subscribe(result => {
+    let req = this.getServiceRequest(text);
+    req.subscribe(result => {
       this.setWeather(result)
       console.log('result : ' + result);
     }, error => {
@@ -68,19 +44,30 @@ export class WeatherComponent implements OnInit {
     });
   }
 
-  setWeather( w : WeatherData ) : void{
+  getServiceRequest(text): Observable<WeatherData> {
+
+    let req: Observable<WeatherData>;
+    if (text == "Current Location") {
+      req = this.weatherSvc.getWeatherByCoordiate(this.latitude, this.longitude);
+    } else {
+      req = this.weatherSvc.getWeatherByCity(text);
+    }
+    return req;
+  }
+
+  setWeather(w: WeatherData): void {
     this.weather = this.toFahrenheit(w);
   }
 
-  toFahrenheit( w : WeatherData) : WeatherData{
+  toFahrenheit(w: WeatherData): WeatherData {
     w.tempCurrent = this.cToF(w.tempCurrent);
     w.tempHigh = this.cToF(w.tempHigh);
     w.tempLow = this.cToF(w.tempLow);
     return w;
   }
 
-  cToF( tc : number ) : number{
-    return (tc * 9/5) + 32
+  cToF(tc: number): number {
+    return (tc * 9 / 5) + 32
   }
 
 }
