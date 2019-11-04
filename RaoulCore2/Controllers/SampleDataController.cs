@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RaoulCore2.Interfaces;
+using System.Threading.Tasks;
 
 namespace RaoulCore2.Controllers
 {
@@ -24,7 +24,7 @@ namespace RaoulCore2.Controllers
         /// <param name="city">Durham,US</param>
         /// <returns>serialized JSON</returns>
         [HttpGet("[action]")]
-        public async Task<string> GetWeatherDataByCity( string city )
+        public async Task<string> GetWeatherDataByCity(string city)
         {
             var res = _weatherService.GetWeatherData(city);
             return await res;
@@ -39,7 +39,7 @@ namespace RaoulCore2.Controllers
         [HttpGet("[action]")]
         public async Task<string> GetWeatherDataByCoordinate(string latitude, string longitude)
         {
-            var res = _weatherService.GetWeatherData(latitude,longitude);
+            var res = _weatherService.GetWeatherData(latitude, longitude);
             return await res;
         }
     }

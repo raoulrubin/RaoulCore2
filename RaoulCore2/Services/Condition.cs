@@ -2,7 +2,7 @@
 {
     public class Condition
     {
-        public Condition( string condition, string detail)
+        public Condition(string condition, string detail)
         {
             this.description = condition;
             this.detail = detail;
