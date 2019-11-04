@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 
 namespace RaoulCore2.Services.Tests
 {
@@ -26,7 +25,7 @@ namespace RaoulCore2.Services.Tests
             Assert.AreEqual(11, res.tempHigh);
             Assert.AreEqual(5, res.tempLow);
             Assert.AreEqual(76, res.percentHumidity);
-            Assert.AreEqual(DateTime.Now.ToString("F"), res.localTime);
+            // res.localTime will break tests because of daylight savings time
         }
     }
 }

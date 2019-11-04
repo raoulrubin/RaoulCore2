@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RaoulCore2.Interfaces;
+using RaoulCore2.Services;
 
 namespace RaoulCore2
 {
@@ -26,6 +28,8 @@ namespace RaoulCore2
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddSingleton<IWeatherService, WeatherService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

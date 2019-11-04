@@ -1,13 +1,14 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using RaoulCore2.Interfaces;
 using System;
 using System.Linq;
 
 namespace RaoulCore2.Services
 {
-    public class WeatherData
+    public class WeatherData : IWeatherData
     {
-        public WeatherData( string error)
+        public WeatherData(string error)
         {
             this.error = error;
         }
@@ -32,7 +33,7 @@ namespace RaoulCore2.Services
                 int.TryParse(timezone, out tz);
                 var ct = DateTime.UtcNow.AddSeconds(tz);
                 localTime = ct.ToString("U");
- 
+
             }
             catch (Exception ex)
             {
@@ -46,7 +47,7 @@ namespace RaoulCore2.Services
         }
 
 
-        private int KtoC( JToken jtk)
+        private int KtoC(JToken jtk)
         {
             if (double.TryParse(jtk.ToString(), out double k))
             {
@@ -62,12 +63,12 @@ namespace RaoulCore2.Services
 
         public string location { get; }
         public string country { get; }
-        public Condition [] conditions { get; }
+        public Condition[] conditions { get; }
         public string details { get; }
         public int tempCurrent { get; }
         public int tempHigh { get; }
         public int tempLow { get; }
-        public int percentHumidity { get;  }
+        public int percentHumidity { get; }
         public string wind { get; }
         public string localTime { get; }
         public string error { get; }

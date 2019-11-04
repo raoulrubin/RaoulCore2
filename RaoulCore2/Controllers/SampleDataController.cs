@@ -1,29 +1,45 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RaoulCore2.Services;
+using RaoulCore2.Interfaces;
 
 namespace RaoulCore2.Controllers
 {
     [Route("api/[controller]")]
     public class SampleDataController : Controller
     {
+        public readonly IWeatherService _weatherService;
 
+        /// <summary>
+        /// User constructor injection
+        /// </summary>
+        /// <param name="svc"></param>
+        public SampleDataController(IWeatherService svc)
+        {
+            _weatherService = svc;
+        }
+
+        /// <summary>
+        /// Get weather data by city
+        /// </summary>
+        /// <param name="city">Durham,US</param>
+        /// <returns>serialized JSON</returns>
         [HttpGet("[action]")]
         public async Task<string> GetWeatherDataByCity( string city )
         {
-            var svc = new WeatherService();
-            var res = svc.GetWeatherData(city);
+            var res = _weatherService.GetWeatherData(city);
             return await res;
         }
 
+        /// <summary>
+        /// Get weather data by coordinates
+        /// </summary>
+        /// <param name="latitude"></param>
+        /// <param name="longitude"></param>
+        /// <returns>serialized JSON</returns>
         [HttpGet("[action]")]
         public async Task<string> GetWeatherDataByCoordinate(string latitude, string longitude)
         {
-            var svc = new WeatherService();
-            var res = svc.GetWeatherData(latitude,longitude);
+            var res = _weatherService.GetWeatherData(latitude,longitude);
             return await res;
         }
     }
